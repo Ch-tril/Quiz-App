@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Application - Web Development & DNS</title>
+  
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    
+    <!-- ===================================
+         START SCREEN
+         =================================== -->
+    <div id="start-screen">
+      <h1 class="title">Web Developer & DNS Quiz</h1>
+      <p class="description">Test your knowledge on web development, DNS architecture, and networking concepts!</p>
+      
+      <div class="quiz-rules">
+        <strong>Rules & Info:</strong>
+        <ul>
+          <li>Each correct answer earns <strong>+1 point</strong>.</li>
+          <li>You have <strong>1 minute (60s)</strong> per question.</li>
+          <li>If the timer runs out, the question is skipped and score is <strong>decremented by 1 point (-1)</strong>.</li>
+        </ul>
+      </div>
+
+      <button id="start-btn" class="btn">Start Quiz</button>
+    </div>
+
+    <!-- ===================================
+         QUIZ SCREEN
+         =================================== -->
+    <div id="quiz-screen" class="hidden">
+      <div class="quiz-header">
+        <span id="question-progress" class="status-text">Question 1 of 20</span>
+        <span id="score-display" class="status-text">Score: 0</span>
+        <div class="timer-badge">⏱️ <span id="time-left">60</span>s</div>
+      </div>
+
+      <div class="card">
+        <h2 id="question-text" class="question-text">Loading question...</h2>
+        <div id="options-container" class="options-grid"></div>
+      </div>
+
+      <div class="controls">
+        <button id="next-btn" class="btn hidden">Next Question</button>
+      </div>
+    </div>
+
+    <!-- ===================================
+         RESULTS SCREEN
+         =================================== -->
+    <div id="results-screen" class="hidden">
+      <h1 class="title">Quiz Completed!</h1>
+      <div class="results-summary">
+        <p>Your Final Score:</p>
+        <div id="final-score" class="final-score">0</div>
+      </div>
+
+      <h3 style="margin-bottom: 12px;">Detailed Breakdown:</h3>
+      <div id="results-list" class="results-list"></div>
+
+      <button id="restart-btn" class="btn">Try Again</button>
+    </div>
+
+  </div>
+
+  <!-- ===================================
+       External Scripts
+       =================================== -->
+  
+  <!-- Quiz Data (must load first) -->
+  <script src="js/data.js"></script>
+  
+  <!-- Main Quiz Logic -->
+  <script src="js/quiz.js"></script>
+</body>
+</html>

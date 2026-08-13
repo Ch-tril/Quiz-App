@@ -1,0 +1,12 @@
+{ "message": "Hello, World!", "description": "This is a string with \"escaped\" quotes", "unicode": "Special characters: © ® ™" }
+{
+ "name": "Alice Johnson",
+ "age": 28,
+ "isStudent": false,
+ "courses": ["Math", "Science", "History"],
+ "address": {
+   "street": "123 Main St",
+   "city": "Boston",
+   "zipCode": "02101"
+ }
+}
